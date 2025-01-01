@@ -17,43 +17,43 @@ Este é um template para criar projetos usando **NestJS**. Ele já vem com uma e
 
 1. **Clone o repositório:**
 
-```bash
-git clone <URL_DO_REPOSITORIO>
-```
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   ```
 
 2. Remova o diretório `.git` para desvincular o histórico de commits:
 
-a. No Windows
+   - No Windows
 
-```bash
-rmdir -Recurse -Force .git
-```
+     ```bash
+     rmdir -Recurse -Force .git
+     ```
 
-b. No Linux
+   - No Linux
 
-```bash
-rm -rf .git
-```
+     ```bash
+     rm -rf .git
+     ```
 
 3. Configure o Git do projeto, crie um novo repositório e vincule o projeto a ele:
 
-```bash
-git init
-git add .
-git commit -m "init: start project"
-git remote add origin <URL_DO_NOVO_REPOSITORIO>
-```
+   ```bash
+   git init
+   git add .
+   git commit -m "init: start project"
+   git remote add origin <URL_DO_NOVO_REPOSITORIO>
+   ```
 
 4. Instale as dependências do projeto:
 
-```bash
-pnpm install
-```
+   ```bash
+   pnpm install
+   ```
 
 5. Crie um arquivo `.env` na raiz do projeto seguindo o `.env.example`
 
 6. Inicie o servidor de desenvolvimento
 
-```bash
-pnpm run start:dev
-```
+   ```bash
+   pnpm run start:dev
+   ```
