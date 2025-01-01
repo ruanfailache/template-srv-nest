@@ -2,6 +2,17 @@
 
 Este é um template para criar projetos usando **NestJS**. Ele já vem com uma estrutura de pastas organizada e preparada para desenvolvimento de APIs.
 
+## Estrutura de pastas
+
+**app:** Contém os módulos e funcionalidades principais da aplicação.
+
+> [!WARNING]
+> Não remover o módulo de `healthcheck` e caso haja comunicação com outros microserviços, adicionar verificação de healthcheck na parte de dependências.
+
+**core:** Agrupa configurações e funcionalidades da aplicação, tal como swagger, tratamento de erro, banco de dados, comunicação com outros microserviços, etc.
+
+**shared:** Contém recursos genéricos e reutilizáveis por toda a aplicação como pipes, guards, etc.
+
 ## Como Usar Este Template
 
 1. **Clone o repositório:**
@@ -45,54 +56,4 @@ pnpm install
 
 ```bash
 pnpm run start:dev
-```
-
-## Estrutura de pastas
-
-```plaintext
-src/
-├── app/
-│   ├── example/
-│   │   ├── mappers/
-│   │   │   ├── example.mapper.ts
-│   │   ├── requests/
-│   │   │   ├── example.request.ts
-│   │   ├── responses/
-│   │   │   ├── example.response.ts
-│   │   ├── example.controller.ts
-│   │   ├── example.module.ts
-│   │   └── example.service.ts
-│   ├── healthcheck/
-│   │   ├── responses/
-│   │   │   ├── healthcheck.response.ts
-│   │   ├── healthcheck.controller.ts
-│   │   └── healthcheck.module.ts
-│   └── app.module.ts
-├── core/
-│   ├── database/
-│   │   ├── entities/
-│   │   │   ├── example.entity.ts
-│   │   ├── repositories/
-│   │   │   ├── example.repository.ts
-│   │   ├── database.module.ts
-│   │   └── repository.module.ts
-│   ├── error/
-│   │   ├── exceptions/
-│   │   │   ├── business.exception.ts
-│   │   ├── filters/
-│   │   │   ├── business-exception.filter.ts
-│   │   │   ├── default.filter.ts
-│   │   │   ├── http-exception.filter.ts
-│   │   ├── responses/
-│   │   │   ├── error.response.ts
-│   │   └── error.config.ts
-│   ├── swagger/
-│   │   └── swagger.config.ts
-│   └── core.module.ts
-├── shared/
-│   ├── pipes/
-│   │   └── zod.pipe.ts
-│   └── shared.module.ts
-└── main.ts
-
 ```
