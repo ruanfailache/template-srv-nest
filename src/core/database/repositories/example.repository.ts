@@ -3,13 +3,14 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
 
+import { IExampleRepository } from '@/app/example/example.repository';
 import { CreateExampleRequest } from '@/app/example/requests/create-example.request';
 import { BusinessException } from '@/core/error/exceptions/business.exception';
 
 import { Example } from '../entities/example.entity';
 
 @Injectable()
-export class ExampleRepository {
+export class ExampleRepository implements IExampleRepository {
   constructor(
     @InjectRepository(Example)
     private readonly exampleRepository: Repository<Example>,
